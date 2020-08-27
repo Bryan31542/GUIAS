@@ -9,6 +9,7 @@ int main(){
     char *p = palabra;
 
     cout << *p << "\t"; //P
+    cout << &p << "\t"; //Direccion puntero
     cout << *(p+2) << "\t"; //n
     cout << *(p+3); //aumentar en tres
 

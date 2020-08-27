@@ -5,21 +5,24 @@ using namespace std;
 
 void posicion(char cadena[], int caracter, int longitud){
 
-    int i;
+    int i = 0;
     char bandera = 'F';
+    char *p2 = &bandera;
 
-    while((bandera == 'F') && (i < longitud)){
+    while((*p2 == 'F') && (i < longitud)){
 
         if (cadena[i] == caracter){
 
-            bandera = 'V';
+            *p2 = 'V';
         }
         i++;
 
     }
 
-    if (bandera == 'V'){
-        cout << "El caracter se encuentra en la posicion: " << i - 1 << endl; 
+    int *p = &i;
+
+    if (*p2 == 'V'){
+        cout << "El caracter se encuentra en la posicion: " << (*p - 1) << endl; 
     }
     cout << endl;
 }
