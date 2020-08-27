@@ -45,7 +45,8 @@ int main(){
 
     char cadena[50];
     int vocales = 0;
-    int *p;
+    char *p;
+    p = cadena; // es lo mismo que p = &cadena[0]
 
     cout << "\nIngrese una cadena de caracteres: ";
     
@@ -53,7 +54,7 @@ int main(){
 
     strupr(cadena); //Transformando a mayuscla el nombre (string.h)
 
-    cout << "El numero de vocales en la cadena es: " << vocal(cadena) << endl;
+    cout << "El numero de vocales en la cadena es: " << vocal(p) << endl;
 
     return 0;
 }
